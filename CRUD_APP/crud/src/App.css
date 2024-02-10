@@ -1,0 +1,14 @@
+.App {
+  text-align: center;
+}
+
+.crud_Options > button {
+  margin-right: 20px;
+}
+input {
+  width: 40%;height: 40px;font-size: 125%;
+}
+.btn {
+  height:45px; padding-top: 5px;
+  border-top-right-radius: 10px;
+}
