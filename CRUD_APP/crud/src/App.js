@@ -64,7 +64,7 @@ function Delete_sql() {
 
 function App() {
 
-  const [state, setState] = useState (<div><input type='text' placeholder = 'Enter your sql'></input><button className='btn'>Send</button></div>);
+  const [state, setState] = useState (<div><span>Or enter your SQL</span><br /><br /><input type='text' placeholder = 'Enter your sql'></input><button className='btn'>Send</button></div>);
 
   function creating() {
     setState(<div>
@@ -129,7 +129,7 @@ function App() {
         <button onClick={Reading}>Read</button>
         <button onClick={Deleting}>Delete</button>
       </div><br /><br />
-      <span>Or enter your SQL</span><br /><br />
+      
       {state}
     </div>
   );
