@@ -2,6 +2,42 @@ import { useState } from 'react';
 import './App.css';
 import Create from './modules/Create';
 
+//////////////////FEACTHING DATA/////////////////
+// useEffect(() => {
+//   const fetchData = async () => {
+//       try {
+//           const response = await fetch('http://localhost:5051/read');
+//           if (!response.ok) {
+//               throw new Error('Network response was not ok');
+//           }
+//           const data = await response.json();
+//           console.log(data);
+//           // values = data
+//       } catch (error) {
+//           console.error('Error fetching data:', error);
+//       }
+//   };
+
+//   fetchData();
+// }, []);
+
+////////////////////SENDING DATA///////////////////////////
+// function sending() {
+//   const dataToSend = {
+//     key: 'value',
+//     anotherKey: 'anotherValue'
+//   };
+
+//   axios.get('/formFront', dataToSend)
+//     .then(response => {
+//       console.log(response.data);
+//       response.send(dataToSend)
+//     })
+//     .catch(error => {
+//       console.error('Error sending data:', error);
+//     });
+// }
+
 var value11;
 var value22;
 var value33;
