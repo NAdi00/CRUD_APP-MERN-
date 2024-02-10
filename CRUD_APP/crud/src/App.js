@@ -72,7 +72,8 @@ function App() {
       <input type='text' placeholder='type' onMouseLeave={value_1}></input><br /><br />
       <label>Name</label><br />
       <input type='text' placeholder='name' onMouseLeave={value_2}></input><br /><br />
-      <button onClick={Create_sql} >Create</button>
+      <button onClick={Create_sql} >Create</button><br /><br />
+      <button onClick={backk} >SQL</button>
     </div>)
   }
   function Inserting() {
@@ -82,7 +83,8 @@ function App() {
       <label>colomn</label><br />
       <input type='text' placeholder='All yours Columns:'onMouseLeave={value_2}></input><br />
       <input type='text' placeholder='All your insert values:' onMouseLeave={value_3}></input><br />
-      <button onClick={Insert_sql} >Insert</button>
+      <button onClick={Insert_sql} >Insert</button><br /><br />
+      <button onClick={backk} >SQL</button>
     </div>)
   }
   function Updating() {
@@ -95,7 +97,8 @@ function App() {
       <label>Conditions:</label><br />
       <input type='text' placeholder='Column:' onMouseLeave={value_4}></input><br />
       <input type='text' placeholder='then value(Condition):' onMouseLeave={value_5}></input><br /><br />
-      <button onClick={Update_sql} >Update</button>
+      <button onClick={Update_sql} >Update</button><br /><br />
+      <button onClick={backk} >SQL</button>
     </div>)
   }
   function Reading() {
@@ -105,7 +108,8 @@ function App() {
       <label>Conditions(optional - only if not all the data)</label><br />
       <input type='text' placeholder='Column name:'onMouseLeave={value_2}></input><br />
       <input type='text' placeholder='then value:'onMouseLeave={value_3}></input><br /><br />
-      <button onClick={Select_sql} >Find</button>
+      <button onClick={Select_sql} >Find</button><br /><br />
+      <button onClick={backk} >SQL</button>
     </div>)
   }
   function backk() {
