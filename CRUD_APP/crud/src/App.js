@@ -42,7 +42,7 @@ function Update_sql() {
   try {
     sql = `UPDATE ${value11} SET ${value22} = ${value33} WHERE ${value55} = ${value66};`
   } catch (error) {
-    
+    sql = `UPDATE ${value11} SET ${value22} = ${value33};`
   }
   console.log(sql);
   //////////////SEND THIS SQL REQUEST TO BACKEND(Node)
