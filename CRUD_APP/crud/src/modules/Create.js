@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 const Create = (props) => {
   return (
-    <button>
-        {props.title}
+    <button onClick={props.creating}>
+        Create
     </button>
   )
 }
