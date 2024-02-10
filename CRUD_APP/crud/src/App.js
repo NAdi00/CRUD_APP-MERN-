@@ -108,13 +108,17 @@ function App() {
       <button onClick={Select_sql} >Find</button>
     </div>)
   }
+  function backk() {
+    setState(state)
+  }
   function Deleting() {
     setState(<div>
       <label>Type:databse/table</label><br></br>
       <input type='text' placeholder='type' onMouseLeave={value_1}></input><br /><br />
       <label>Name</label><br />
       <input type='text' placeholder='name'onMouseLeave={value_2}></input><br /><br />
-      <button onClick={Delete_sql} >Delete</button>
+      <button onClick={Delete_sql} >Delete</button><br /><br />
+      <button onClick={backk} >SQL</button>
     </div>)
   }
 
@@ -129,7 +133,6 @@ function App() {
         <button onClick={Reading}>Read</button>
         <button onClick={Deleting}>Delete</button>
       </div><br /><br />
-      
       {state}
     </div>
   );
