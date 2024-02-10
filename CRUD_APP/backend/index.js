@@ -51,6 +51,37 @@ mongoose.connect('mongodb://localhost:27017/node_db')
             console.log(err);
         })
     })
+    app.put('/update/:id', (req, res) => {
+        const channelId = req.params.id;
+        const updatedName = req.body.name; // Assuming the updated name is sent in the request body
+    
+        ChannelModel.findByIdAndUpdate(channelId, { name: updatedName }, { new: true })
+            .then(updatedChannel => {
+                if (!updatedChannel) {
+                    return res.status(404).json({ error: 'Channel not found' });
+                }
+                return res.json(updatedChannel);
+            })
+            .catch(err => {
+                console.log(err);
+                return res.status(500).json({ error: 'Internal server error' });
+            });
+    });
+    app.delete('/delete/:id', (req, res) => {
+        const channelId = req.params.id;
+    
+        ChannelModel.findByIdAndDelete(channelId)
+            .then(deletedChannel => {
+                if (!deletedChannel) {
+                    return res.status(404).json({ error: 'Channel not found' });
+                }
+                return res.json({ message: 'Channel deleted successfully' });
+            })
+            .catch(err => {
+                console.log(err);
+                return res.status(500).json({ error: 'Internal server error' });
+            });
+    });
     const PORT = 5050
     app.listen(PORT, () => {
         console.log(`listing to port ${PORT}`);
